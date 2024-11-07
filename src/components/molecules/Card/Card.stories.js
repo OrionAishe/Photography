@@ -5,8 +5,9 @@ export default {
   component: Card,
   title: "Molecules/Card",
   args: {
-    backgroundImage: "/public/3ed3437ad8ff2bcc66ef90939f91d7dc.png",
-    Variant: ''
+    BGImage: "/3ed3437ad8ff2bcc66ef90939f91d7dc.png",
+    Variant: '',
+    link: '/'
   },
 };
 

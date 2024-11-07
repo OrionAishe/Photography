@@ -15,7 +15,7 @@ import { computed } from "vue";
 export default {
   name: "Card",
   components: {
-    Tag,
+    Tag
   },
   props: {
     BGImage: {
@@ -29,7 +29,7 @@ export default {
     },
     Variant: {
       type: String,
-      default: "body1",
+      default: "",
     },
   },
   setup(props) {
