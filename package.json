@@ -8,22 +8,22 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "storybook": "storybook dev"
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
+    "@nuxtjs/storybook": "^8.3.2",
     "nuxt": "^3.13.2",
-    "storybook": "^8.4.1",
     "typescript": "^5.6.3",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/vue3-webpack5": "^8.4.1",
     "@storybook/addon-essentials": "^8.1.11",
     "@storybook/addon-interactions": "^8.1.11",
     "@storybook/addon-links": "^8.1.11",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
     "@storybook/blocks": "^8.1.11",
-    "@storybook/test": "^8.1.11"
+    "@storybook/test": "^8.1.11",
+    "@storybook/vue3-webpack5": "^8.4.1"
   }
 }

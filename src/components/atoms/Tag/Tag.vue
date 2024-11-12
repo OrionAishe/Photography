@@ -1,11 +1,17 @@
 <template>
     <div class="Tag">
-        <slot name="title" />
+       {{ title }}
     </div>
 </template>
 <script>
 export default {
     name: "Tag",
+    props: {
+        title: {
+            type: String,
+            required: true
+        }
+    }
 };
 </script>
 <style>

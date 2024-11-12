@@ -5,7 +5,7 @@
         <NuxtLink :to="nav.link" class="Link">{{ nav.title }}</NuxtLink>
       </li>
     </ul>
-    <Button -variant="Primary"><template #title>Contact</template></Button>
+    <Button -variant="Primary" children="Contact"></Button>
   </header>
 </template>
 
@@ -39,24 +39,26 @@ export default {
 };
 </script>
 <style>
-.Header {
-  background-color: #000000;
-  display: flex;
-  padding: 0 135px;
-  align-items: center;
-  height: 80px;
-  justify-content: space-between;
-}
+@media (min-width: 850px) {
+  .Header {
+    background-color: #000000;
+    display: flex;
+    padding: 0 135px;
+    align-items: center;
+    height: 80px;
+    justify-content: space-between;
+  }
 
-.Lista {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  width: 500px;
-}
+  .Lista {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 60%;
+  }
 
-.Link {
-  text-decoration: none;
-  color: #fff;
+  .Link {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 </style>
