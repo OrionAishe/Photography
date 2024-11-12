@@ -1,22 +1,19 @@
-import type { StorybookConfig } from "@storybook/vue3-webpack5";
+import type { StorybookConfig } from "@storybook-vue/nuxt";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "@storybook/addon-essentials",
-    "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-links",
+    "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-a11y",
-    "@chromatic-com/storybook",
-    "@whitespace/storybook-addon-html"
+    "@storybook/addon-webpack5-compiler-swc",
   ],
   framework: {
-    name: "@storybook/vue3-webpack5",
+    name: "@storybook-vue/nuxt",
     options: {},
   },
   docs: {
-    defaultName: "Documentation",
+    autodocs: "tag",
   },
   staticDirs: ["../public"],
 };

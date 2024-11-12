@@ -1,10 +1,8 @@
 <template>
   <NuxtLink :to="link" class="Link">
     <div class="Card" :style="styles">
-      <Tag
-        ><template #title><slot name="Tag" /></template
-      ></Tag>
-      <h3 class="Title"><slot name="Title" /></h3>
+      <Tag :title="Tag"></Tag>
+      <h3 class="Title">{{ title }}</h3>
     </div>
   </NuxtLink>
 </template>
@@ -15,7 +13,7 @@ import { computed } from "vue";
 export default {
   name: "Card",
   components: {
-    Tag
+    Tag,
   },
   props: {
     BGImage: {
@@ -31,12 +29,19 @@ export default {
       type: String,
       default: "",
     },
+    title: {
+      type: String,
+      required: true,
+    },
+    Tag: {
+      type: String,
+      required: true,
+    },
   },
   setup(props) {
     const styles = computed(() => ({
       backgroundImage: `url(${props.BGImage})`,
-      width: props.Variant == 'header' ? '1170px' : props.Variant != '' ? '90%' : '370px',
-      height: props.Variant == 'header' ? '720' : '416px'
+      height: props.Variant == "header" ? "720" : "416px",
     }));
     return {
       styles,
@@ -47,7 +52,7 @@ export default {
 <style scoped>
 .Card {
   background-size: cover;
-  width: 370px;
+  width: auto;
   height: 416px;
   border-radius: 6px;
   padding: 51px 28px;
@@ -65,7 +70,7 @@ export default {
   margin: 0;
 }
 
-.Link{
+.Link {
   text-decoration: none;
 }
 </style>

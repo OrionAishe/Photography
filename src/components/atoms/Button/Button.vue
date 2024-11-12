@@ -1,6 +1,6 @@
 <template>
   <button :class="classes" @click="onClick">
-    <slot name="title" />
+    {{ children }}
   </button>
 </template>
 
@@ -16,6 +16,10 @@ export default {
       default: "Primary",
     },
     onClick: {},
+    children: {
+      type: String,
+      required: true
+    }
   },
   setup(props) {
     const classes = computed(() => ["Button", `Button--${props.Variant}`]);

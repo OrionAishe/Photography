@@ -5,10 +5,9 @@
         :-b-g-image="item.BGImage"
         :link="item.link"
         :-variant="variants[index]"
-      >
-        <template #Title>{{ item.Title }}</template>
-        <template #Tag>{{ item.Tag }}</template>
-      </Card>
+        :-tag="item.Tag"
+        :title="item.title"
+      />
     </div>
   </div>
 </template>
