@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       extensions: [".vue"],
     },
   ],
+  css: ['~/src/assets/css/stylesheet.css'],
   modules: ["@nuxtjs/storybook"],
   storybook: {
     host: "http://localhost",

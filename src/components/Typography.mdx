@@ -1,0 +1,108 @@
+import { Meta } from '@storybook/blocks';
+import '../assets/css/stylesheet.css'
+ 
+<Meta title="Typography" />
+ 
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+ 
+# Typography
+ 
+**Font:** Space Grotesk
+ 
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<br />
+H1:
+<h1 className="h1">{SampleText}</h1>
+H2:
+<h2 className="h2">{SampleText}</h2>
+H3:
+<h3 className="h3">{SampleText}</h3>
+H4:
+<h4 className="h4">{SampleText}</h4>
+H5:
+<h5 className="h5">{SampleText}</h5>
+Label:
+<label className="label">{SampleText}</label>
+Paragraph:
+<p className="p">{SampleText}</p>
+Text Big:
+<p className="p TextBig">{SampleText}</p>
+Text Gray:
+<p className="p TextGray">{SampleText}</p>
+
+<style>
+{`
+  .h1{
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 80px;
+    letter-spacing: -2px;
+    font-family: "Space Grotesk";
+    margin: 20px 0;
+  }
+
+  .h2{
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    font-family: "Space Grotesk";
+    margin: 20px 0
+  }
+
+  .h3{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Space Grotesk";
+    margin: 20px 0
+  }
+
+  .h4{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Space Grotesk";
+    margin: 20px 0
+  }
+
+  .h5{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    font-family: "Space Grotesk";
+    margin: 20px 0
+  }
+
+  .label{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12.3px;
+    font-family: "Space Grotesk";
+  }
+
+  .p{
+    &.TextBig{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      font-family: "Space Grotesk";
+    }
+
+    &.TextGray{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #363636a3;
+      font-family: "Space Grotesk";
+    }
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: "Space Grotesk";
+  }
+`}
+</style>
