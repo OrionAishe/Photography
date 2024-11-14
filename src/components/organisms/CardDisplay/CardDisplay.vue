@@ -1,14 +1,12 @@
 <template>
   <div :class="classes">
-    <div v-for="(item, index) in Cards" :style="styles[index]">
-      <Card
+      <Card v-for="(item, index) in Cards" :style="styles[index]"
         :-b-g-image="item.BGImage"
         :link="item.link"
         :-variant="variants[index]"
         :-tag="item.Tag"
         :title="item.title"
       />
-    </div>
   </div>
 </template>
 <script>

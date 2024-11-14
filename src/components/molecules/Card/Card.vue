@@ -64,9 +64,6 @@ export default {
 
 .Title {
   color: #fff;
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 48px;
   margin: 0;
 }
 
