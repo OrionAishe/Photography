@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     {
       path: "~/src/components",
       extensions: [".vue"],
+      enabled: true,
     },
   ],
   css: ['~/src/assets/css/stylesheet.css'],

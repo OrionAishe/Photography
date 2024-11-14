@@ -1,12 +1,10 @@
-import type { StorybookConfig } from "@storybook-vue/nuxt";
-
-const config: StorybookConfig = {
+/** @type { import('storybook-vue').StorybookConfig } */
+const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-webpack5-compiler-swc",
+    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook-vue/nuxt",
@@ -15,6 +13,5 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["../public"],
 };
 export default config;

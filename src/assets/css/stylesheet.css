@@ -64,6 +64,9 @@
       line-height: 32px;
       color: #363636a3;
       font-family: "Space Grotesk";
+      &.--DarkMode{
+        color: #7A7A7A
+      }
     }
 
     font-weight: 400;
