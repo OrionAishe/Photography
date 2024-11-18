@@ -149,6 +149,7 @@ export default {
     position: static;
     padding: 0;
     width: 100%;
+    height: auto;
   }
 
   .MenuHamburguer{
@@ -159,6 +160,7 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 60%;
+    flex-direction: row;
   }
 }
 </style>
