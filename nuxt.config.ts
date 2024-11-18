@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   ],
   css: ['~/src/assets/css/stylesheet.css'],
-  modules: ["@nuxtjs/storybook"],
+  modules: ["@nuxtjs/storybook", "@nuxt/ui"],
   storybook: {
     host: "http://localhost",
     port: 6006,
