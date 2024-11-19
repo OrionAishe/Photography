@@ -44,7 +44,7 @@ export default {
         };
       } else {
         return {
-          width: "98%",
+          width: "99%",
         };
       }
     });
