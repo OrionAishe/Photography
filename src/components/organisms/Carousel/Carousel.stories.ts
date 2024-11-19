@@ -9,7 +9,14 @@ export default {
       "/3ed3437ad8ff2bcc66ef90939f91d7dc.png",
       "/3ed3437ad8ff2bcc66ef90939f91d7dc.png",
     ],
+    variant: 'Primary'
   },
 };
 
 export const Primary = {};
+
+export const Secondary = {
+  args: {
+    variant: 'Secondary'
+  }
+};
