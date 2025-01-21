@@ -44,15 +44,15 @@ async function fetchGraphQL(query) {
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer kbaxkI0FBZ72U-zAfD6qkBF5TkVWkOstkUF-f-q7hq4`,
+    Authorization: `Bearer ${accessToken}`,
   };
 
   if (accessToken) {
-    headers.Authorization = `Bearer kbaxkI0FBZ72U-zAfD6qkBF5TkVWkOstkUF-f-q7hq4`;
+    headers.Authorization = `Bearer ${accessToken}`;
   }
 
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/crze65dkrcom`,
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
       headers: headers,
