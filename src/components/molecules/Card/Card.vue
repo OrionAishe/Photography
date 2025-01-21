@@ -65,6 +65,7 @@ export default {
 .Title {
   color: #fff;
   margin: 0;
+  text-transform: capitalize;
 }
 
 .Link {
