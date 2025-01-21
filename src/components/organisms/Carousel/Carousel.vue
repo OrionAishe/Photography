@@ -57,7 +57,7 @@ export default {
     });
     return { styles, cardType };
   },
-  created() {
+  mounted() {
     const carouselRef = useTemplateRef('carouselRef')
 
     setInterval(() => {
