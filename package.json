@@ -11,8 +11,9 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "contentful": "^10.8.7",
+    "@nuxt/icon": "^1.10.3",
     "@nuxt/ui": "^2.19.2",
+    "contentful": "^10.8.7",
     "nuxt": "^3.13.2",
     "typescript": "^5.6.3",
     "vue": "latest",

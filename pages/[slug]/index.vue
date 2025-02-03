@@ -16,6 +16,7 @@
       ></AtomsText>
     </div>
     <OrganismsCarousel variant="Secondary" :items="items"></OrganismsCarousel>
+    <AtomsText type="Section" text="Projetos Relacionados"></AtomsText>
     <OrganismsCardDisplay
       :-cards="cards"
       Variant="Secondary"
@@ -61,14 +62,12 @@ const cards =
   );
 </script>
 <style>
-body {
-  margin: 0 50px;
-}
 
 .Page{
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 0 50px;
 }
 
 .Texts {
