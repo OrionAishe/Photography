@@ -6,7 +6,7 @@
           <NuxtLink :to="nav.link" class="Link">{{ nav.title }}</NuxtLink>
         </li>
       </ul>
-      <Button -variant="Primary" children="Contact"></Button>
+      <Button -variant="Primary" children="Contact" :onclick="ButtonClick"></Button>
     </nav>
     <div class="MenuHamburguer" :onclick="OpenNav">
       <div class="Menu-burguer1" />
@@ -26,16 +26,12 @@ export default {
   setup() {
     const navLinks = computed(() => [
       {
-        title: "Teste",
+        title: "Home",
         link: "/",
       },
       {
-        title: "Teste",
-        link: "/",
-      },
-      {
-        title: "Teste",
-        link: "/",
+        title: "Portifólio",
+        link: "/Portifolio",
       },
     ]);
     return {
@@ -47,6 +43,10 @@ export default {
       e.currentTarget.classList.toggle("Open");
       this.$refs.Menu.classList.toggle("Open");
     },
+    ButtonClick(){
+      const router = useRouter()
+      router.push({ path: "/Contact" })
+    }
   },
 };
 </script>
@@ -152,7 +152,7 @@ export default {
     height: auto;
   }
 
-  .MenuHamburguer{
+  .MenuHamburguer {
     display: none;
   }
 
