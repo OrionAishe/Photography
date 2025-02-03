@@ -100,7 +100,6 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 0 135px;
   }
 
   .CardDisplay--Secondary {
