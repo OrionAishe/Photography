@@ -45,6 +45,7 @@ const items =
       return {
         title: `/${item.title}`,
         src: item.media.url,
+        link: item.media.url
       };
     }
   );
