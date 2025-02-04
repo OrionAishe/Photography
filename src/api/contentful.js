@@ -41,18 +41,18 @@ pageCollection{
 `
 
 async function fetchGraphQL(query) {
-  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+  const config = useRuntimeConfig()
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${accessToken}`,
+    Authorization: `Bearer ${config.accessToken}`,
   };
 
   if (accessToken) {
-    headers.Authorization = `Bearer ${accessToken}`;
+    headers.Authorization = `Bearer ${config.accessToken}`;
   }
 
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+    `https://graphql.contentful.com/content/v1/spaces/${config.spaceId}`,
     {
       method: "POST",
       headers: headers,

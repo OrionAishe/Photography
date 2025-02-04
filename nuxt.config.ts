@@ -9,10 +9,14 @@ export default defineNuxtConfig({
       enabled: true,
     },
   ],
-  css: ['~/src/assets/css/stylesheet.css'],
+  css: ["~/src/assets/css/stylesheet.css"],
   modules: ["@nuxtjs/storybook", "@nuxt/ui", "@nuxt/icon"],
   storybook: {
     host: "http://localhost",
     port: 6006,
+  },
+  runtimeConfig: {
+    spaceId: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   },
 });
