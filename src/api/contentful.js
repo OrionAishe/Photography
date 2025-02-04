@@ -44,15 +44,11 @@ async function fetchGraphQL(query) {
   const config = useRuntimeConfig()
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${config.accessToken}`,
+    Authorization: `Bearer ${config.public.accessToken}`,
   };
 
-  if (accessToken) {
-    headers.Authorization = `Bearer ${config.accessToken}`;
-  }
-
   return fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${config.spaceId}`,
+    `https://graphql.contentful.com/content/v1/spaces/${config.public.spaceId}`,
     {
       method: "POST",
       headers: headers,

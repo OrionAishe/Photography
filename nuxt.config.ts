@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     port: 6006,
   },
   runtimeConfig: {
-    spaceId: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-  },
+    public: {
+      spaceId: process.env.NUXT_PUBLIC_API_BASE,
+      accessToken: process.env.NUXT_API_SECRET
+    }
+  }
 });
