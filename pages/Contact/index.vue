@@ -33,6 +33,7 @@
   padding: 100px 50px;
   text-align: center;
   background-color: #000000;
+  color: #fff;
 }
 
 .Contact__Content{
