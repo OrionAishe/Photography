@@ -13,12 +13,7 @@
         v-for="n in pages.length"
         :-variant="Page == n ? 'Secondary' : 'Primary'"
         :children="n.toString()"
-        @click="
-          () => {
-            Page = n;
-            console.log(Page);
-          }
-        "
+        @click="Page = n"
       ></AtomsButton>
     </div>
   </div>
@@ -56,9 +51,8 @@ for (let i = 0; i < cards.length / 6; i++) {
   padding: 50px;
 }
 
-.Portifolio__Buttons{
+.Portifolio__Buttons {
   display: flex;
   gap: 10px;
 }
-
 </style>
