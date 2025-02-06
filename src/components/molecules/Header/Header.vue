@@ -6,7 +6,7 @@
           <NuxtLink :to="nav.link" class="Link">{{ nav.title }}</NuxtLink>
         </li>
       </ul>
-      <Button -variant="Primary" children="Contact" :onclick="ButtonClick"></Button>
+      <Button -variant="Primary" children="Contact" @click="ButtonClick"></Button>
     </nav>
     <div class="MenuHamburguer" :onclick="OpenNav">
       <div class="Menu-burguer1" />
@@ -43,10 +43,9 @@ export default {
       e.currentTarget.classList.toggle("Open");
       this.$refs.Menu.classList.toggle("Open");
     },
-    ButtonClick(){
-      const router = useRouter()
-      router.push({ path: "/Contact" })
-    }
+    async ButtonClick() {
+      await navigateTo({ path: "/Contact" });
+    },
   },
 };
 </script>

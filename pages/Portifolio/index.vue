@@ -43,7 +43,7 @@ for (let i = 0; i < cards.length / 6; i++) {
   pages.push(cards.slice(i * 6, i + 1 * 6));
 }
 </script>
-<style>
+<style scoped>
 .Portifolio__Content {
   display: flex;
   flex-direction: column;
