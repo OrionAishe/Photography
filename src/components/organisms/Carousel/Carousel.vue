@@ -1,81 +1,43 @@
 <template>
-  <UCarousel
-    ref="carouselRef"
-    class="Carousel"
-    v-slot="{ item }"
-    :ui="{ item: cardType }"
-    :items="items"
-    arrows
-    indicators
-  >
-    <NuxtLink :to="item.link" :style="styles">
-      <img
-        :style="styles"
-        :src="item.src"
-        alt=""
-        width="300"
-        height="400"
-        draggable="false"
-      />
-    </NuxtLink>
-  </UCarousel>
+  <Carousel v-bind="carouselConfig">
+    <Slide v-for="item in items">
+      <NuxtLink :to="item.link">
+        <img class="Image"
+          :src="item.src"
+          alt=""
+          draggable="false"
+        /> </NuxtLink
+    ></Slide>
+
+    <template #addons>
+      <Navigation />
+      <Pagination />
+    </template>
+  </Carousel>
 </template>
 
-<script>
-import { computed } from "vue";
+<script setup>
+import "vue3-carousel/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
-export default {
-  name: "Carousel",
-  props: {
-    items: {
-      type: Object,
-    },
-    variant: {
-      type: String,
-      default: "Primary",
-    },
+const props = defineProps({
+  items: {
+    type: Object,
   },
-  setup(props) {
-    const styles = computed(() => {
-      if (props.variant == "Primary") {
-        return {
-          width: "100%",
-          filter: "grayscale(1)",
-        };
-      } else {
-        return {
-          width: "99%",
-        };
-      }
-    });
-    const cardType = computed(() => {
-      if (props.variant == "Primary") {
-        return "basis-full";
-      } else {
-        return "basis-full md:basis-1/2";
-      }
-    });
-    return { styles, cardType };
+  variant: {
+    type: String,
+    default: "Primary",
   },
-  mounted() {
-    const carouselRef = useTemplateRef('carouselRef')
+});
 
-    setInterval(() => {
-      if (!carouselRef.value) return;
-
-      if (
-        carouselRef.value.page === carouselRef.value.pages
-      ) {
-        return carouselRef.value.select(0);
-      }
-      carouselRef.value.next();
-    },10000);
-  },
+const carouselConfig = {
+  itemsToShow: props.variant == "Primary" ? 1 : 1.5,
+  wrapAround: true,
+  gap: 10
 };
 </script>
 <style scoped>
-.Carousel {
-  display: flex;
-  justify-content: center;
+.Image{
+  width: 100%;
 }
 </style>
