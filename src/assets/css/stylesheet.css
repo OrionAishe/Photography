@@ -3,6 +3,8 @@
   body{
     margin: 0;
     font-family: "Space Grotesk";
+    background-color: #101010;
+    color: #fff;
   }
 
   h1{
