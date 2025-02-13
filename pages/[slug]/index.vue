@@ -41,11 +41,12 @@ const relatedWorks = await getEntry(
 
 const items =
   carousel.data.carouselCollection.items[0].mediaWrapperCollection.items.map(
-    (item: { title: any; media: { url: any } }) => {
+    (item: { title: any; media: { url: any; }; altText: any; }) => {
       return {
         title: `/${item.title}`,
         src: item.media.url,
-        link: item.media.url
+        link: item.media.url,
+        alt: item.altText
       };
     }
   );

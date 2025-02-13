@@ -21,6 +21,7 @@ const items =
       return {
         link: `/${item.title}`,
         src: item.media.url,
+        alt: item.altText
       };
     }
   );
