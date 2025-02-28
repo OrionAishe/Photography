@@ -9,12 +9,12 @@
   </div>
   <div class="Contact__Content">
     <div class="Contact__Box">
-      <Icon name="solar:phone-bold" size="1.5em" />
+      <Icon class="Contact__Icon" name="solar:phone-bold" size="1.5em" />
       <h5>TELEFONE</h5>
       <p class="TextBig">+55 11 999-999-999</p>
     </div>
     <div class="Contact__Box">
-      <Icon name="material-symbols:mail" size="1.5em" />
+      <Icon class="Contact__Icon" name="material-symbols:mail" size="1.5em" />
       <h5>EMAIL</h5>
       <p class="TextBig">example@example.com</p>
     </div>
@@ -47,9 +47,15 @@
 .Contact__Box{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
   border: 1px solid white;
   gap: 0;
   min-width: 250px;
+}
+
+.Contact__Icon{
+  width: 100%;
 }
 
 .TextBig{
